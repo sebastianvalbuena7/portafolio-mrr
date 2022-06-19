@@ -190,12 +190,12 @@ h3 {
 .grid .item img{
     width: 101%;
     margin-top: -60px;
-    transform: skewY(10deg) scale(1,1);
+    transform: skewY(10deg) scale(1.2,1.2);
     transition: all 0.075s;
 }
 
 .grid .item:hover img {
-    transform: skewY(10deg) scale(1.2,1.2);
+    transform: skewY(10deg) scale(1.4,1.4);
 }
 
 .grid .item .bg-hover {
@@ -258,16 +258,36 @@ h3 {
     .main-video{
         height: 600px;
     }
+
+    .grid .item {
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+    }
 }
 
 @media (max-width: 1280px) {
     .main-video {
         height: 400px;
     }
+
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .grid .item {
+        height: 150px;
+    }
 }
 
 @media (max-width: 900px) {
-    
+    .grid .item {
+        height: 150px;
+    }
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 800px) {
@@ -276,6 +296,12 @@ h3 {
     }
     .main-video .video video {
         margin-top: 0;
+    }
+    .grid .item {
+        height: 150px;
+    }
+    .grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -294,5 +320,15 @@ h3 {
     .main-video {
         margin-top: 100px;
         height: 150px;
+    }
+    .main-video {
+        margin-top: 100px;
+        height: 150px;
+    }
+    .grid .item{
+        height: 200px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
     }
 }
