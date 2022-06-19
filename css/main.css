@@ -233,6 +233,63 @@ h3 {
     color: var(--background-color);
 }
 
+.about {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 150px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact {
+    background-color: #000;
+    padding-top: 150px;
+    color: white;
+    transform: skewY(-10deg);
+}
+
+.contact .contact-container{
+    transform: skewY(10deg);
+    color: var(--background-color);
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.contact .contact-container h3{
+    color: white;
+}
+
+.contact .contact-container .emails {
+    text-align: right;
+}
+
+.contact .contact-container .emails h3{
+    text-align: right;
+}
+
+.contact .contact-container .location h3{
+    text-align: left;
+}
+
+.contact .contact-container .social {
+    text-align: center;
+}
+
+.contact .contact-container .social a:hover path{
+    fill: var(--highlight-color);
+}
+
+footer{
+    background-color: #000;
+    height: 450px;
+    margin-top: -170px;
+}
+
 @keyframes opening-logo {
     0% {
         transform: scale(0);
@@ -271,13 +328,23 @@ h3 {
     .main-video {
         height: 400px;
     }
-
     .grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
-
     .grid .item {
         height: 150px;
+    }
+    .contact .contact-container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .contact .contact-container h3{
+        text-align: center !important;
+    }
+
+    .contact .contact-container .emails {
+        text-align: center !important;
     }
 }
 
@@ -302,6 +369,14 @@ h3 {
     }
     .grid {
         grid-template-columns: 1fr 1fr;
+    }
+    .columns {
+        flex-direction: column;
+        gap: 0;
+    }
+    .columns div{
+        width: 100%;
+        text-align: center;
     }
 }
 
