@@ -54,4 +54,19 @@ prevButton.addEventListener("click", e => {
     }
     currentIndex--;
     loadGalleryItem(currentIndex);
-})
+});
+
+nextButton.addEventListener("click", e => {
+    if(currentIndex + 1 == workItemsCount) {
+        return;
+    }
+    currentIndex++;
+    loadGalleryItem(currentIndex);
+});
+
+function loadGalleryItem(index) {
+    const items = document.querySelectorAll("#details-container .item");
+
+    items.forEach(item => item.classList.add("item-hide"));
+    items[index].classList.toggle("idem-hide");
+}
