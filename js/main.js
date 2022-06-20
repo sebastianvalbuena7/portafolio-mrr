@@ -32,4 +32,26 @@ workItems.forEach(item => {
             document.querySelector("#screen").style = "";
         }, 2000);
     })
+});
+
+closeButton.addEventListener("click", e => {
+    e.preventDefault();
+
+    document.querySelector("#screen").style["animation-name"] = "fade-in";
+    document.querySelector("body").style["overflow"] = "auto";
+    setTimeout(() => {
+        document.querySelector("#details-container").style.display = "none"
+    }, 1000);
+
+    setTimeout(() => {
+        document.querySelector("#screen").style = "";
+    }, 2000);
+});
+
+prevButton.addEventListener("click", e => {
+    if(currentIndex - 1 < 0) {
+        return;
+    }
+    currentIndex--;
+    loadGalleryItem(currentIndex);
 })
